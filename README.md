@@ -31,3 +31,13 @@ npm start
 > Note: the `npm install` command is used to create the nodes and is only needed once 
 
 ## User section 
+When the api is launched, it opens in the browser as localhost:3000 and you can see : 
+![Anime list](https://github.com/ZenosukeFukami/Anime_Project/blob/main/images/anime_list_blog.png)
+If you are logged in you can write a comment here :
+![comment](https://github.com/ZenosukeFukami/Anime_Project/blob/main/images/comments.png)
+Else, you can login here or register :
+![registe](https://github.com/ZenosukeFukami/Anime_Project/blob/main/images/register.png)
+
+
+Here is the list of users in the admin part of the api :
+![userlist](https://github.com/ZenosukeFukami/Anime_Project/blob/main/images/userlist.png)
