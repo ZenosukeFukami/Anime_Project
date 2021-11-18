@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  api:
+    build: Back
+    image: anime_back
+    networks:
+      - default
+    command: ["python", "manage.py","runserver"]
+    ports:
+      - 5000:5000
+  front:
+    build:
+      context: Front
+      dockerfile: Dockerfile
+    image: anime_front
+    networks:
+      - default
+    ports:
+      - 3000:3000
+    command: ["npm start"]
+    
