@@ -5,13 +5,24 @@ In this project, the goal was to develop an API to comment and rate animes.
 
 ## Development section
 
+### Dockerisation
+
+We had problem using docker to build the api and the front, the docker compose build/up is working but when we want to connect to the front or the back with the url link, the connection is interrupted.
+
 ### Backend
 For the backend part and register/authentication we used the [Django](https://www.djangoproject.com/) framework.
 The files containing the backend code are in the [Back](https://github.com/ZenosukeFukami/Anime_Project/tree/main/Back) folder.
 
+While the dockeristaion doesn't work to launch the back you need an python environnement with :
+
+Django==3.2.9
+django-cors-headers==3.10.0
+djangorestframework==3.12.4
+
 To launch the api backend :
 ```
 cd Back
+python pip install requirements.txt
 python manage.py runserver
 ```
 
