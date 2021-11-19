@@ -16,7 +16,9 @@ The files containing the backend code are in the [Back](https://github.com/Zenos
 While the dockeristaion doesn't work to launch the back you need an python environnement with :
 
 Django==3.2.9
+
 django-cors-headers==3.10.0
+
 djangorestframework==3.12.4
 
 To launch the api backend :
@@ -52,3 +54,9 @@ Else, you can login here or register :
 
 Here is the list of users in the admin part of the api :
 ![userlist](https://github.com/ZenosukeFukami/Anime_Project/blob/main/images/userlist.png)
+
+
+### Issue
+The only main issue we got is with the login and register page, while is it possible to log with a username and password already in the database, if we make a mistake the front will still create a token define as undefined. This lead to the switch of the webpage to the one that show the anime list. But while the token is present but not define, the access to the api/animes will be forbidden leading to an error. The problem is that the fetch function don't take 404 bad request as an error so the creation of the token is made. The only solution is to mannually delete the token "mytoken" using f12 and going in the Application section.
+
+The same problem is existing for the register where using the api url localhost:8000/api/users we can post a new user but using the front the acess is forbidden, don't understand why.
